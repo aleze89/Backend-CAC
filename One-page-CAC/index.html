@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="static/img/favicon-32x32.ico" type="image/x-icon">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>AprenDEV</title>
+</head>
+<body>
+    <header >
+
+        <nav class="nav-bar scrolled">
+
+            <div class="top-bar">
+
+                <!-- logo -->
+                <div class="logo">
+                    <img src="static\img\logo.svg" alt="Signo gráfico de la marca">
+                    <a href="#hero-banner">
+                        <span>aprenDEV</span>
+                    </a>
+                </div>
+                <!-- Icono menu hamburguesa. Estado inicial: Hidden -->
+                
+                <div class="menu-hamburguesa" id="menu-hamburguesa">
+                    <img src="static/img/menu.svg" alt="Icono menu hamburguesa">
+                </div>
+                
+            </div>                         
+    
+            <!-- Menu antes de los cambios -->
+            <!-- Separador (Menu responsive) -->
+            <hr>
+            
+            <!--Hipervinculos para el menu -->
+            <div class="menu-desplegable" id="menu-desplegable">
+
+                <ul class="nav-links">
+                    <li><a href="#acerca-de">¿Por qué elergirnos?</a></li>
+                    <li><a href="#nuestros-cursos">Nuestros cursos</a></li>
+                    <li><a href="#contacto"><button class="filled">¡Asesorate!</button></a></li>
+                </ul>
+
+            </div>
+            <!-- Agregar script con JS para que se apliquen las reglas '.scrolled' al abandonar la seccion #hero-banner -->
+        </nav>
+    </header>
+
+    <main>           
+        <!-- Above the line -->
+        <section id="hero-banner" class="tema-oscuro">
+            
+            <div class="container">
+
+                <h1>Desarrolla tu potencial</h1>
+                <p><br>
+                    No importa tu punto de partida, con nuestros cursos  podrás alcanzar tus metas profesionales.
+                </p>
+                <div class="inline">
+                    <a href="#nuestros-cursos">
+                        <button class="filled" type="button">Ver cursos</button>
+                    </a>
+                    <a href="#test-nivel">
+                        <button class="outlined" type="button">¿Qué nivel tengo?</button>
+                    </a>
+                </div>
+
+                
+            </div>
+
+        </section>
+
+        <section id="acerca-de" class="tema-claro">
+
+            <div class="container">
+
+                <div class="texto">
+                
+                    <h2>Nuestra metodología</h2>
+                    <p>
+                        Queremos guiarte y asesorarte durante el transcurso de tu formación tecnológica. Para ello contamos con <strong>tecnicas didacticas de avanzada</strong>.. pero para que contartelo, si te lo podemos mostrar:
+                    </p>
+               </div>     
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/7BlodHlymEI?si=07L1i1ZD1Ji_SqDw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+            </div>
+                      
+
+            
+        </section>
+
+        <section id="nuestros-cursos" class="tema-claro tonal">
+
+            <div class="container">
+
+                <div class="descripcion">
+
+                    <h2>Desarrollo web: de cero a especialista</h2>
+                    <p>
+                        Elige el camino de aprendizaje que mejor se adapte a tus necesidades y objetivo:
+                    </p>
+
+                </div>
+                
+                <div class="tarjetas">
+
+                    <div class="curso-inicial tarjeta elevacion-2">
+
+                        <h4 class="volanta">Nivel inicial</h4>
+                        <h3>Fundamentos de programación</h3>
+                        <p>
+                            Aprende las bases de la programación, familiarizate con el pensamiento logico y computacional. <br>Domina el lenguaje nativo de Internet e ingresa al mundo del desarrollo web.
+                        </p>
+                        <ul class="lista-items">
+                            <li><span class="material-symbols-outlined">stacks</span>
+                                <p>8 Modulos</p>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">schedule</span>
+                                <p>24hs</p>
+                            </li>
+                        </ul>
+                        <a href="#curso-inicial">
+                            <button class="outlined" type="button">Más información</button>
+                        </a>
+
+                    </div>
+
+                    <div class="curso-intermedio tarjeta elevacion-2">
+
+                        <h4 class="volanta">Nivel intermedio</h4>
+                        <h3>Desarrollo web <br>Front-End</h3>
+                        <p>
+                            Domina el desarrollo del lado del cliente y descubre cómo crear interfaces impactantes, profesionales y optimizadas. Aprende a utilizar JavaScript para crear experiencias altamente interactivas.
+                        </p>
+                        <ul class="lista-items">
+                            <li><span class="material-symbols-outlined">stacks</span>
+                                <p>16 Modulos</p>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">schedule</span>
+                                <p>48hs</p>
+                            </li>
+                        </ul>
+                        <a href="#curso-intermedio">
+                            <button class="outlined" type="button">Más información</button>
+                        </a>
+
+                    </div>
+
+                    <div class="curso-avanzado tarjeta elevacion-2">
+
+                        <h4 class="volanta">Nivel avanzado</h4>
+                        <h3>Desarrollo web <br>Back-End</h3>
+                        <p>
+                            Aprende a desarrollar del lado del servidor, bases de datos y arquitecturas web escalables. <br> Aprende a usar lenguajes como Java para crear la lógica y funcionalidad que dan vida a las aplicaciones web.
+                        </p>
+                        <ul class="lista-items">
+                            <li><span class="material-symbols-outlined">stacks</span>
+                                <p>24 Modulos</p>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined">schedule</span>
+                                <p>72hs</p>
+                            </li>
+                        </ul>
+                        <a href="#curso-avanzado">
+                            <button class="outlined" type="button">Más información</button>
+                        </a>
+
+                    </div>
+    
+                    </div>
+
+                </div>
+
+
+            </div>  
+
+        </section>
+
+        <section id="test-nivel" class="tema-oscuro">
+
+            <div class="container">
+
+                <div class="titulares">
+                    <h2>¿No sabes cual elegir?</h2>
+                    <h3>Haz nuestro test de nivel</h3>
+                </div>
+
+                <div class="descripcion">
+                    <p>
+                        Sabemos que enfrentarse a una nueva disciplina puede resultar complicado e incluso dar un poquito de miedo al principio.
+                        Por eso armamos una prueba sencilla para que puedas elegir el curso <strong>perfecto para ti</strong>!
+                    </p>               
+                    <button class="filled">Test de nivel</button>
+                    <a href="#contacto">
+                        <button class="outlined">Prefiero un asesor</button>
+                    </a>
+                    
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="detalles-cursos" class="tema-claro">
+
+            <div id="curso-inicial" class="container elevacion-1">
+
+                <div class="imagen-curso">
+                    <img src="static/img/curso-nivel-inicial-mediana.jpg" alt="Curso Inicial" width="250">
+                </div>
+
+                <div class="texto-curso">
+                    <h4 class="volanta">Nivel inicial</h4>
+                    <h2>Fundamentos de programación</h2>
+                    
+                    <p>
+                        Este curso introductorio te brinda las bases esenciales para comenzar tu camino como programador. Aprenderás los conceptos fundamentales de la programación, desde la lógica y la sintaxis hasta la resolución de problemas y la creación de tus primeros programas.
+                    </p>       
+                    <ul class="lista-items">
+                        <li><span class="material-symbols-outlined">stacks</span>
+                            <p>8 Modulos</p>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">schedule</span>
+                            <p>24hs</p>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">terminal</span>
+                            <p>100 ejercicios</p>
+                        </li>
+                    </ul>          
+                    
+                    <p>Al finalizar este curso, seras capaz de:</p>
+                    <ul class="pros">
+                        <li>Dominar los conceptos básicos de la programación</li>
+                        <li>Desarrollar habilidades de pensamiento crítico y analítico</li>
+                        <li> Abrir las puertas a una amplia gama de oportunidades profesionales</li>
+                    </ul>
+
+                    <h4>Tecnologias que aprenderas:</h4>
+                    <ul class="chips">
+                        <li>Globstones</li>
+                        <li>Scratch</li>
+                        <li>MDN</li>
+                        <li>Deepnote</li>
+                        <li>GIT</li>
+                    </ul>
+                    <span>
+                        <a href="">
+                            <button class="outlined" type="button">Programa de contenidos</button>
+                        </a>
+                        <a href="">
+                            <button class="filled" type="button">Comprar</button>
+                        </a>
+                    </span>
+                    
+                    
+                                        
+                </div>
+                            
+            </div>       
+
+            <div id="curso-intermedio" class="container elevacion-1 reverse">
+
+                <div class="imagen-curso">
+                    <img src="static/img/curso-nivel-intermedio-mediana.jpg" alt="Curso Intermedio" width="250">
+                </div>
+
+                <div class="texto-curso">
+                    <h4 class="volanta">Nivel Intermedio</h4>
+                    <h2>Desarrollo web Front-End</h2>
+
+                    <p>
+                        Este curso te permitirá adquirir las habilidades necesarias para crear interfaces web atractivas e interactivas utilizando HTML, CSS y JavaScript. Domina las herramientas y metodologías para construir sitios web modernos y de alto rendimiento.
+                    </p>     
+                    <ul class="lista-items">
+                        <li><span class="material-symbols-outlined">stacks</span>
+                            <p>16 Modulos</p>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">schedule</span>
+                            <p>48hs</p>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">cases</span>
+                            <p>3 Proyectos</p>
+                        </li>
+                    </ul> 
+
+                    <p>Al finalizar este curso, seras capaz de:</p>
+                    <ul class="pros">
+                        <li>Desarrollar sitios tanto estaticos como dinamicos.</li>
+                        <li>Dominar herramientas y metodologías modernas </li>
+                        <li>Crear portafolios web profesionales</li>
+                        <li>Ingresar a una industria en constante crecimiento.</li>
+                    </ul>
+
+                    <h4>Tecnologias que aprenderas:</h4>
+                    <ul class="chips">
+                        <li>VSCode</li>
+                        <li>GitHub</li>
+                        <li>HTML 5</li>
+                        <li>CSS 3</li>
+                        <li>JavaScript</li>
+                        <li>REACT</li>
+                        <li>SASS</li>       
+                    </ul>
+
+                    <span>
+                        <a href="">
+                            <button class="outlined" type="button">Programa de contenidos</button>
+                        </a>
+                        <a href="">
+                            <button class="filled" type="button">Comprar</button>
+                        </a>
+                    </span>
+                                        
+                </div>
+                            
+            </div>
+
+            <div id="curso-avanzado" class="container elevacion-1">
+
+                <div class="imagen-curso">
+                    <img src="static/img/curso-nivel-avanzado-mediana.jpg" alt="Curso Avanzado" width="250">
+                </div>
+
+                <div class="texto-curso">
+                    <h4 class="volanta">Nivel Avanzado</h4>
+                    <h2>Desarrollo web Back-End</h2>
+                    
+                    <p>                     
+                        Este curso está dirigido a desarrolladores front-end que buscan dar un paso adelante y dominar el back-end. Aprenderás los fundamentos del desarrollo del lado del servidor, incluyendo lenguajes como Python, Java o JavaScript, bases de datos y arquitecturas web escalables. Con estas habilidades, estarás preparado para crear aplicaciones web completas y robustas.
+                    </p>   
+                    <ul class="lista-items">
+                        <li><span class="material-symbols-outlined">stacks</span>
+                            <p>24 Modulos</p>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">schedule</span>
+                            <p>72hs</p>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">cases</span>
+                            <p>1 Proyecto</p>
+                        </li>
+                    </ul> 
+
+                    <p>Al finalizar este curso, seras capaz de:</p>
+                    <ul class="pros">
+                        <li>Desarrollar APIs RESTful seguras y eficientes.</li>
+                        <li>Trabajar con bases de datos para almacenar y recuperar datos.</li>
+                        <li>Implementar arquitecturas web escalables y de alto rendimiento.</li>
+                        <li>Desplegar y mantener aplicaciones web en producción.</li>
+                    </ul>
+
+                    <h4>Tecnologias que aprenderas:</h4>
+                    <ul class="chips">
+                        <li>GIT Avanzado</li>
+                        <li>MySQL</li>
+                        <li>Postgre SQL</li>
+                        <li>Mongo DB</li>
+                        <li>Java</li>
+                        <li>Spring</li>
+                        <li>AWS</li>
+                        <li>TypeScript</li>
+                        <li>Docker</li>
+                        <li>Nest</li>
+                        <li>Redux</li>
+                    </ul>
+
+                    <span>
+                        <a href="">
+                            <button class="outlined" type="button">Programa de contenidos</button>
+                        </a>
+                        <a href="">
+                            <button class="filled" type="button">Comprar</button>
+                        </a>
+                    </span>
+                                        
+                </div>
+                            
+            </div>
+
+        </section>
+
+        <section id="contacto" class="tema_claro tonal">
+
+            <div class="container">
+
+                <div id="ponete-en-contacto">
+                    <h2>Ponete en contacto</h2>
+                    <p>
+                        Estamos aca para atenderte, llamanos o mandanos un correo y te respondemos <strong>lo antes posible</strong>.
+                    </p>
+
+
+                    <div class="nuestros-datos">
+
+                        <div class="dato-contacto">
+                            <span class="material-symbols-outlined iconos-grandes">call</span>
+                            <div class="dato">
+                                <p><b>Número de telefono</b></p>
+                                <p id="nuestro-telefono">+54 9 011 1234-567</p>
+                            </div>
+                        </div>
+                        <div class="dato-contacto">
+                            <span class="material-symbols-outlined iconos-grandes">mail</span>
+                            <div class="dato">
+                                <p><b>Buzón de correo</b></p>
+                                <p id="nuestro-correo">Hola!@aprenDEV.com.ar</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div id="te-contactamos" class="tarjeta elevacion-2">
+
+                    <h2>¿Hablamos?</h2>
+                    <p>
+                        Si lo prefieres, puedes completar este formulario y nosotros nos ponemos en contacto con vos. Es <strong>sin cargo</strong> y <strong>libre de compromiso!</strong>
+                    </p>
+    
+                    <form action="#" id="formregister" method="get" novalidate>
+                        
+                        <div class="form-control">
+                            <label for="firstname" class="firstname">Nombre *</label>
+                            <input id="firstname" name="firstname" type="text" placeholder="Hugo">
+                            <div class="error" id="error-firstname"></div>
+                        </div>
+                        
+    
+                        <div class="form-control">
+                            <label for="lastname" class="lastname">Apellido *</label>
+                            <input id="lastname" name="lastname" type="text" placeholder="Gonzalez">
+                            <div class="error" id="error-lastname"></div>
+                        </div>
+    
+                        <div class="form-control">
+                            <label for="email" class="email">Correo electrónico *</label>
+                            <input id="email" name="email" type="email" placeholder="hugo-gonzalez@ejemplo.com">
+                            <div class="error" id="error-email"></div>
+                        </div>
+    
+                        <!-- En los formularios de contacto dan la opcion de elegir el pais para determinar el GTM para responder y precargar el código de acceso internacional.
+    
+                        Muchas veces se conjugan estos 2 casilleros en una misma linea, bajo el titulo "Numero de telefono.
+                        
+                        Por el momento, voy a comentar esta parte del código en caso de que alguien se anime a hacer el script en JS"-->
+    
+                        <!-- <div class="form-control">
+                            <label for="country">País</label>
+                            <select name="country" id="country" class="form-select">
+                                <option value="">Pais</option>
+                                <option value="AR">Argentina</option>
+                                <option value="BO">Bolivia</option>
+                                <option value="BR">Brasil</option>
+                                <option value="CH">Chile</option>
+                                <option value="CO">Colombia</option>
+                                <option value="EC">Ecuador</option>
+                                <option value="PY">Paraguay</option>
+                                <option value="PE">Peru</option>
+                                <option value="UY">Uruguay</option>
+                                <option value="VE">Venezuela</option>
+                            </select>
+                        </div> -->
+    
+                        <div class="form-control">
+                            <label for="phone" class="phone">Número de teléfono *</label>
+                            <input id="phone" name="phone" type="tel" placeholder="+54 9112473 4567">
+                            <div class="error" id="error-phone"></div>
+                        </div>
+    
+                        <!-- Input para elegir la preferencia de contacto. 
+                        Ref: https://www.educacionit.com/cursos-de-java en la sección '¿Necesitas asesoria?' -->
+                        <div class="form-control">
+                            <label for="preference">¿Cómo nos comunicamos?</label>
+                            <fieldset>
+                                <span>
+                                    <label for="contact-choice-1" >Whatsapp</label>
+                                    <input type="radio" id="contact-choice-1" name="contact-choice" value="whatsapp">
+                                </span>
+                                <span>
+                                    <label for="contact-choice-2" >Correo electrónico</label>
+                                    <input type="radio" id="contact-choice-2" name="contact-choice" value="email">
+                                </span>
+                            </fieldset>
+                            <div class="error" id="error-comunicacion"></div>
+                        </div>
+    
+                        <!-- Item para consultar / pedir asesoria sobre un curso
+                        Ref: https://codespaceacademy.com/contacto/ -->
+                         <div class="form-control">
+                            <label for="product" class="product">¿Qué curso te interesa? *</label>
+                            <select name="product" id="product" class="form-select">
+                                <option value="" class="placeholder">Seleccioná un curso...</option>
+                                <option value="N1">Fundamentos de la programación</option>
+                                <option value="N2">Desarrollo web Front End</option>
+                                <option value="N3">Desarrollo web Back-end</option>
+                            </select>
+                            <div class="error" id="error-product"></div>
+                        </div>
+    
+                        <!-- Espacio para escribir un mensaje inicial de contacto -->
+                        <div class="form-control">
+    
+                            <label for="message" class="message">Comentanos tu duda *</label>
+                            <textarea id="message" name="message" required cols="30" rows="10" placeholder="Hola, necesito ayuda para..."></textarea>
+                            <div class="error" id="error-message"></div>
+                        </div>
+    
+                        <!-- Descargo de responsabilidad -->
+                        <p class="letra-chica">
+                            Como responsables del tratamiento de los datos, nos comprometemos a proteger y respetar tu privacidad, usándolos con la finalidad responder tu consulta. <strong>No vamos a enviarte promociones ni mensajes de otro tipo</strong>.
+                        </p>
+    
+                        <div class="form-terms">
+    
+                            <div class="terms">
+    
+                                <input type="checkbox" id="terms">
+                                <label for="terms">Estoy de acuerdo con la <a href="templates/privacy.html">política de privacidad</a>
+                                </label>
+                                <div class="error" id="error-terms"></div>
+                            </div>
+                        </div>
+
+                        <p id="status-message" class="status-message"></p>
+    
+                        <!-- Bóton para enviar consulta -->
+                        <button class="filled" type="submit">Ponerse en contacto</button>
+                        
+                    </form>  
+    
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer id="footer" class="tema-oscuro">
+        
+        <div class="container">
+            
+            <div class="footer-link">
+
+                <div class="descripcion">
+                    <!-- logo -->
+                    <div class="logo">
+                        <img src="static\img\logo.svg" alt="Signo gráfico de la marca">
+                        <a href="#hero-banner">
+                            <span>aprenDEV</span>
+                        </a>
+                    </div>
+                    <p>No importa tu punto de partida, con nuestros cursos  podrás alcanzar tus metas profesionales.</p>
+                </div>
+
+                <div class="link">
+                    <h3>Redes Sociales</h3>
+                    <div class="socials">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <h3>Subscribete</h3>
+                    <form>
+                        <input type="email" placeholder="hugo-gonzalez@ejemplo.com">
+                        <input class="filled" type="submit" value="Enviar">
+                    </form>
+                </div>
+
+            </div>
+
+            <hr>
+            
+            <div class="footer-text">
+                <a href="templates/privacy.html">Politicas de privacidad</a>
+                <a href="templates/reserved.html">Todos los derechos reservados</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

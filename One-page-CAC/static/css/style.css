@@ -1,0 +1,989 @@
+:root {
+    --primary-color: #ffffff;
+    --primary-color-hover: hsl(0, 0%, 97%);
+    --primary-color-focus: hwb(0 100% 0% / 0.302);
+    --primary-color-active: hsl(0, 0%, 94%);
+    --secondary-color: #1b1d20;
+    --secondary-color-hover: hsl(216, 8%, 9%);
+    --secondary-color-focus: hwb(216 11% 87% / 0.302); 
+    --secondary-color-active: hsl(216, 8%, 6%);
+
+    --tertiary-color:hsl(280, 100%, 50%);
+
+    --tertiary-color-hover: hsl(280, 100%, 47%);
+    --tertiary-color-focus: hwb(280 0% 0% / 0.302);
+    --tertiary-color-active: hsl(280, 100%, 44%);
+    --error-color: #ba1a1a;
+    --color-neutral-99: GhostWhite;
+    --color-neutral-95: hsl(216, 8%, 95%);
+    --color-neutral-80: LightGrey;
+    --color-neutral-60: DarkGrey;
+    --color-neutral-50: hsl(0, 0%, 50%);
+    --color-neutral-40: DimGrey;
+    --color-neutral-30: hsl(0, 0%, 30%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Efectos */
+
+/* Trancisiones */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 79px;
+}
+
+/* Elevaciones */
+
+.elevacion-1 {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.elevacion-2 {
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+}
+
+.elevacion-3 {
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Iconos pequeños */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 600,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/* Iconos grandes */
+.iconos-grandes {
+    color: var(--tertiary-color);
+    font-size: 36px; 
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 36
+}
+
+
+/* Elementos */
+
+body {
+    font-family: Inter, system-ui, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo {
+    font-weight: bold;
+    display: flex;
+    align-self: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 40px;
+    color: var(--error-color);
+}
+
+.logo a {
+    font-size: 21px;
+}
+
+h1 {
+    font-size: 72px;
+    line-height: 72px;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 900px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 700px;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+fieldset {
+    display: flex;
+    gap: 16px;
+}
+
+input[type='radio'] {
+    accent-color: var(--tertiary-color);
+}
+
+.lista-items span {
+    color: var(--tertiary-color);
+}
+
+.lista-items ul {
+    display: inline-flex;
+    gap: 24px;
+}
+
+.lista-items li {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    list-style: none;
+    margin-right: 16px;
+}
+
+.lista-items p {
+    font-weight:700;
+}
+
+/* Agregar un script en JS para que pase de Transparente al color secundariuo al abandonar la pocision inicial; usar la regla '.scrolled' */
+
+header {
+    color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0px 50px;
+}
+
+nav hr {
+    visibility: hidden;
+}
+
+.menu-hamburguesa {
+    display: none;
+    position: relative;
+    filter: invert();
+    cursor: pointer;
+}
+
+.menu-hamburguesa img {
+    width: 30px;
+    height: 30px;
+}
+
+.menu-desplegable {
+    display: flex;
+} 
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 16px;
+}
+
+.nav-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links button {
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--tertiary-color-active);
+    border-color: var(--tertiary-color-active);
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Agregar un script en JS para que al abandonar el banner hero, el fondo se tiña del color secundario. */
+.scrolled {
+    background-color: var(--secondary-color);
+}
+
+/*MENU hamburguesa*/
+
+@media (max-width: 720px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px;
+    } 
+
+    .menu-hamburguesa {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+
+    .menu-desplegable {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background-color: var(--secondary-color);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    .menu-desplegable.open {
+        display: flex;
+    }
+
+    nav .top-bar {
+        width: 100%;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    nav .logo {
+        margin-block: 28px;
+    }
+
+    nav .nav-links {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+        
+
+    nav hr {
+        visibility: visible;
+        margin: 0;
+    }
+
+}
+
+button {
+    border-radius: 10px;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 16px 8px;
+    cursor:  pointer;
+}
+
+.filled {
+    border: 2px solid var(--tertiary-color);
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+}
+
+.filled:hover {
+    background-color: var(--color-neutral-50);
+    border-color: var(--tertiary-color-hover);
+}
+
+.outlined {
+    border: 2px solid var(--color-neutral-50);
+    background-color: transparent;
+    color: var(--color-neutral-40);
+}
+
+.outlined:hover {
+    color: var(--secondary-color-hover);
+    border-color: var(--secondary-color-hover);
+}
+
+:focus, :focus-visible {
+    border-color: var(--tertiary-color);
+    outline: transparent;
+}
+
+button:focus, input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 7px var(--tertiary-color-focus);
+}
+
+/* ### Botones */
+
+.logo a{
+    color: white;
+    text-decoration: none;
+}
+
+/* ### Comportamientos */
+ 
+header .logo:hover {
+    animation: tilt-n-move-shaking 0.25s infinite;
+}
+ 
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0deg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+ 
+.nav-links a:hover {
+    color: var(--tertiary-color);
+}
+ 
+.nav-links button:hover{
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+}
+
+/* ## Contenedores */
+
+section {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.tarjetas {
+    display:flex;
+    gap: 24px;
+}
+
+.tarjetas > * {
+    flex-basis: 100%;
+
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    padding: 24px;
+}
+
+/* ## Comportamientos */
+
+.tarjeta:hover.interactiva {
+    background-color: var(--primary-color-hover);
+    color:black;
+    cursor: pointer;
+}
+
+.tarjeta:hover.interactiva   span {
+    color:var(--tertiary-color-hover);
+}
+
+
+/* ## Botones */
+
+button {
+    border-radius: 10px;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 16px 8px;
+    cursor: pointer;
+}
+
+.volanta {
+    font-size: medium;
+    font-weight: 600;
+    color: var(--color-neutral-40);
+    display:inline;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chips li {
+    font-size: small;
+    font-weight: 600;
+    background-color: var(--color-neutral-95);
+    color: var(--color-neutral-40);
+    display:inline;
+    padding: 8px 12px;
+    border-radius: 8px;
+    
+
+}
+
+/* ### Comportamientos*/
+
+.filled {
+    border: 2px solid var(--tertiary-color);
+    background-color: var(--tertiary-color);
+    color: var(--primary-color)
+}
+
+.filled:hover {
+    background-color: var(--tertiary-color-hover);
+    border-color: var(--tertiary-color-hover);
+}
+
+.outlined {
+    border: 2px solid var(--color-neutral-50);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: var(--color-neutral-40);
+}
+
+.outlined:hover {
+    color: var(--secondary-color-hover);
+    border-color: var(--secondary-color-hover);
+}
+
+:focus, :focus-visible {
+    border-color: var(--tertiary-color);
+    outline: transparent;
+}
+
+button:focus, input:focus, select:focus, textarea:focus, fieldset > input:focus {
+    box-shadow: 0 0 7px var(--tertiary-color-focus);
+}
+
+
+/* Secciones de la pagina */
+
+/* # Hero-banner */
+
+#hero-banner {
+    background-image: url(../img/banner-hero-grande.jpg);
+    background-size: cover;
+    background-position: Center;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);
+}
+
+#hero-banner .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* # Acerca de */
+
+#acerca-de .container {
+    max-width: 1080px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    width: 100%;
+}
+
+#acerca-de .texto {
+    align-items: center;
+    display: flex;
+    gap: 36px;
+}
+
+#acerca-de .video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+
+#acerca-de iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width:720px) {
+    #acerca-de .texto {
+        display:flex;
+        flex-direction: column;
+        align-items: start;
+        text-align: left;
+        gap: 16px;
+    }
+}
+
+/* # Nuestros cursos */
+
+#nuestros-cursos .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#nuestros-cursos .descripcion {
+    max-width: 720px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#nuestros-cursos .tarjeta {
+    max-width: 290px;
+    min-width: 240px;
+    gap:16px;
+}
+
+#nuestros-cursos .tarjeta button {
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media(max-width:940px) {
+    .tarjetas {
+        display: flex;
+        flex-direction: column;
+        min-width: 300px;
+    }
+}
+
+/* # Test nivel */
+
+#test-nivel {
+    background-image: url(../img/test-nivel-mediana.jpg);
+    background-size: cover;
+    background-position: Center;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);
+}
+
+#test-nivel .container {
+    display: flex;
+
+    gap: 24px;
+}
+
+#test-nivel .titulares {
+    text-align: left;
+    min-width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#test-nivel .descripcion {
+    text-align: left; 
+    margin-top: 16px 0 0 0;
+    gap: 16px;  
+}
+
+#test-nivel button {
+    padding: 16px 16px;
+    margin: 16px 4px 0 4px;
+}
+
+@media(max-width:720px) {
+    #test-nivel .container {
+        flex-direction: column;
+    }
+
+    #test-nivel .titulares {
+        text-align: left;
+    }
+}
+
+/* # Detalles cursos */
+
+#detalles-cursos .container {
+    max-width: 1080px;
+    display:flex;
+    gap: 36px;
+    padding: 48px;
+    border-radius: 20px;
+}
+
+#detalles-cursos .container.reverse {
+    flex-direction: row-reverse;
+}
+
+#detalles-cursos .texto-curso {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#detalles-cursos img {
+    border-radius: 10px;
+    height: 100%;
+    width: 25vw;
+    object-fit: cover;    
+}
+
+#detalles-cursos .volanta {
+    font-size:large;
+}
+
+#detalles-cursos .pros {
+    padding-left: 30px;
+    list-style: none;
+}
+
+#detalles-cursos .pros li:before{
+    content: '✓ ';
+    color: var(--tertiary-color);
+    font-weight: 900;
+  } 
+
+#detalles-cursos button {
+    margin: 8px 16px 0 0;
+    padding: 16px 18px;
+}
+
+/* # Comportamiento Responsive */
+
+@media(max-width:940px) {
+
+    #detalles-cursos .imagen-curso {
+        display:none
+    }
+
+    #detalles-cursos .container {
+        max-width: 720px;
+        gap: 0px;
+    }
+
+    #detalles-cursos .pros li:before {
+        padding-left: 0px;
+    }
+} 
+
+/* # Formulario */
+
+#contacto .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+#contacto .container > * {
+    flex-basis: 100%;
+}
+
+#contacto :is(h2, p)  {
+    padding-bottom: 16px;
+}
+
+#ponete-en-contacto {
+    margin-top: 24px;
+}
+
+#ponete-en-contacto .nuestros-datos {
+    display: block;
+}
+
+#ponete-en-contacto .tarjeta {
+    margin: 8px 0;
+    width: fit-content;
+}
+
+#ponete-en-contacto .dato-contacto  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+}
+
+/* Arreglos */
+
+#ponete-en-contacto  .dato-contacto p  {
+    padding-bottom: 0px;
+}
+
+#te-contactamos :is(.form-control, textarea) {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control, .form-terms {
+    margin: 16px 0;
+}
+
+input, select, textarea, fieldset {
+    padding: 12px;
+    border: 2px solid var(--color-neutral-80);
+    border-radius: 7px;
+    font-size: 16px;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+textarea {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+
+
+#te-contactamos .letra-chica{
+    font-size: small;
+}
+
+#te-contactamos button {
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Comportamiento - Mensajes de error */
+
+.error {
+    color: var(--error-color);
+    font-size: 0.9em;
+    margin-top: 2px;
+}
+
+
+.status-message {
+    color: green;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+::placeholder, .placeholder {
+    color: var(--color-neutral-60);
+    font-weight: 400;
+}
+
+@media(max-width:720px) {
+    #contacto .container {
+        display: inline;
+    }
+
+    #ponete-en-contacto {
+        text-align: center;
+    }
+
+    #ponete-en-contacto .nuestros-datos {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-bottom: 48px;
+    }
+
+    #ponete-en-contacto  .dato-contacto  {
+        display: block;
+        padding-bottom: 16px;
+    }
+}
+
+@media(max-width:460px) {
+    #ponete-en-contacto .nuestros-datos {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* ## Comportamientos */
+
+#ponete-en-contacto  .interactiva.dato-contacto:hover {
+    background-color: var(--primary-color-hover);
+    color:black;
+}
+
+#ponete-en-contacto  .interactiva.dato-contacto:hover  span {
+    color:var(--tertiary-color-hover);
+}
+
+/* # Pie de página */
+
+#footer {
+    padding: 100px 0 50px 0;
+}
+
+#footer .link {
+    width: 360px;
+    text-align: center;
+}
+
+#footer .descripcion p {
+    width: 360px;
+    text-align: left;
+    padding-top: 16px;
+    margin-bottom: 24px;
+}
+
+.footer-link {
+    display: flex;
+    padding: 30PX;
+    justify-content:space-evenly;
+}
+
+.link h3 {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 10px;
+    text-transform: uppercase;
+
+}
+
+.link p, .link a {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-neutral-60);
+    display: block;
+    margin-bottom: 20px;
+}
+
+.link a:hover {
+    color: var(--tertiary-color);
+}
+
+.socials {
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.socials a {
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: transparent;
+    margin: 0 10px 0 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: var(--color-neutral-99);
+    font-size: 20px;
+    padding: 0;
+    justify-content: center;
+    align-content: center;
+}
+
+.socials a:hover {
+    background-color: transparent;
+} 
+
+hr {
+    border: 1px solid var(--color-neutral-40);
+    margin: 35px 0;
+}
+
+.footer-text {
+    display:flex;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+.footer-text a {
+    font-size: 15px;
+    color: var(--color-neutral-60);
+}
+
+.footer-link form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+/* ## Comportamientos */
+
+.footer-text a:hover {
+    color: var(--tertiary-color);
+}
+
+/* ## Responsive */
+
+@media(max-width:720px) {
+
+    #footer {
+        padding: 30px;
+    }   
+    
+    #footer .link {
+        width: 100%;
+    }
+
+    #footer .descripcion p {
+        width: 100%;
+        text-align: center;
+    }
+
+    #footer .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-link {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .footer-text {
+        text-align: center;
+    }
+
+}
+
+
+/* Estilos particulares */
+
+/* ## tema claro */
+
+.tema-claro {
+    background-color: var(--primary-color);
+    color: var(--secondary-color)
+}
+
+.tonal {
+    background-color: var(--color-neutral-95);
+    color: var(--secondary-color);
+}
+
+/* ## tema oscuro */
+
+.tema-oscuro {
+    background-color: var(--secondary-color);
+    color: var(--color-neutral-99);
+}
+
+/* ### Comportamientos botones */
+
+.tema-oscuro .filled {
+    background-color: var(--tertiary-color-active);
+    border-color: var(--tertiary-color-active);
+    /* color: var(--secondary-color) */
+}
+
+.tema-oscuro .filled:hover {
+    background-color: var(--tertiary-color);
+    border-color: var(--tertiary-color);
+}
+
+.tema-oscuro .outlined {
+    border: 2px solid var(--color-neutral-60);
+    color: var(--color-neutral-80);
+}
+
+.tema-oscuro .outlined:hover {
+    color: var(--primary-color-hover);
+    border-color: var(--color-neutral-80);
+}
